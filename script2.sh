@@ -1,6 +1,6 @@
 #!/bin/bash
 #Script that collects the information about the operation system
-rm osinf
+
 
 #to show name of os
 osName=`uname -n`
@@ -14,7 +14,7 @@ activeNetInter=`ifconfig`
 listOfNetInter=`ip address show`
 
 cd
-echo -e " \033[32mOs name:\033[0m $osName\n \033[32mKernel Id:\033[0m $kernelId\n \033[32mFirewall rules:\033[0m $firewallRules\n \033[32mActive Network Interfaces:\033[0m\n$activeNetInter\n \033[32mList of network interfaces:\033[0m\n$listOfNetInter\033[0m\n " >> osinf
+echo -e " \033[32mOs name:\033[0m $osName\n \033[32mKernel Id:\033[0m $kernelId\n \033[32mFirewall rules:\033[0m $firewallRules\n \033[32mActive Network Interfaces:\033[0m\n$activeNetInter\n \033[32mList of network interfaces:\033[0m\n$listOfNetInter\033[0m\n " > osinf
 
 echo -e "Information was saved into $HOME/osinf "
 
