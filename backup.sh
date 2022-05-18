@@ -11,5 +11,5 @@ lsSour=$(ls $source | grep -E "*.conf|*.config")
 if [ "$lsDest" != "${lsSour:0}" ]
 then
 cp -i $destination*.conf $destination*.config $source -n
-printf 'Backup!'
+echo 'Backup!'
 fi
